@@ -7,8 +7,8 @@
       </h1>
     </div>
     <span>
-      Our aim is building innovate web and mobile applicattion for our client
-      to give them competitive advantage.
+      Our aim is building innovate web and mobile applicattion for our client to
+      give them competitive advantage.
     </span>
     <button>Our Services</button>
   </div>

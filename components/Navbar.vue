@@ -1,7 +1,12 @@
 <template>
   <header>
-    <img class="logo" src="./../assets/images/logo.svg" alt="logo" width="30px" />
-    <nav>
+    <img
+      class="logo"
+      src="./../assets/images/logo.svg"
+      alt="logo"
+      width="30px"
+    />
+    <nav role="navigation">
       <ul class="nav__links">
         <li>
           <a href="#" title="service">Services</a>
