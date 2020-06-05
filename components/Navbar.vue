@@ -47,16 +47,20 @@ button {
 }
 
 header {
+  position: absolute;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 30px 10%;
-  background-color: rgba(0, 0, 0, 0.281);
+  width: 100%;
+  z-index: 999;
+  font-size: 1.4rem;
 }
 
 .logo {
   cursor: pointer;
   margin-right: auto;
+  fill: white;
 }
 
 .nav__links {
