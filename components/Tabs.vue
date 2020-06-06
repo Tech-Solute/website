@@ -1,17 +1,17 @@
 <template>
   <div>
     <header class="tabs">
-      <ul>
-        <li v-for="(tab, index) in tabs" :key="index">
-          <div
+      <div class="offers-tab">
+        <div v-for="(tab, index) in tabs" :key="index">
+          <h4
             class="nav-item"
             :class="{ 'is-active': tab.isActive }"
             @click="selectTab(tab)"
           >
             {{ tab.name }}
-          </div>
-        </li>
-      </ul>
+          </h4>
+        </div>
+      </div>
     </header>
     <section class="tabs-details">
       <slot></slot>
@@ -40,8 +40,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+* {
+  box-sizing: border-box;
+}
 .tabs {
-  border-bottom: 1px solid #eee;
+  /*  border-bottom: 2px solid rgba(50, 50, 50, 0.1); */
   margin: 0 10px;
 }
 
@@ -49,25 +52,56 @@ export default {
   padding: 10px;
 }
 
-ul {
-  display: flex;
-  padding: 0;
-  list-style: none;
+.offers-tab {
+  display: grid;
+  /*   -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row wrap;
+  -webkit-box-flex: 0;
+  flex: 0 1 auto; */
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  max-width: 930px;
+  margin-bottom: 70px;
+  overflow: hidden;
+}
 
-  li {
-    margin-right: 40px;
-  }
+.nav-item {
+  position: relative;
+  -webkit-box-flex: 0;
+  flex: 0 1 33.3333%;
+  cursor: pointer;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(50, 50, 50, 0.1);
+  color: #323232;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.88;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out 0s;
 
-  .nav-item {
-    cursor: pointer;
+  /*   &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    background-color: red;
+    visibility: hidden;
 
     &:hover {
-      color: red;
+      visibility: visible;
     }
+  }
+ */
+  &:hover {
+    color: #3f7fe7;
+  }
 
-    &.is-active {
-      color: blue;
-    }
+  &.is-active {
+    color: #3f7fe7;
+    border-bottom: 2px solid #2a73e7;
   }
 }
 </style>

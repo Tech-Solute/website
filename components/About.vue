@@ -22,8 +22,7 @@ export default {
 @import './../assets/styles/_typography.scss';
 
 .about-section {
-  height: 45rem;
-  background-color: yellow;
+  height: 42rem;
   text-align: center;
 
   &__textbox {
@@ -33,14 +32,14 @@ export default {
     padding: 10rem;
 
     & h2 {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
     & p {
       font-size: 2rem;
       margin-bottom: 1rem;
-      line-height: 30px;
-      color: #333;
+      line-height: 1.67;
+      color: rgba(50, 50, 50, 0.7);
     }
   }
 }
