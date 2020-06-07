@@ -1,0 +1,44 @@
+.heading-primary {
+  color: #eee;
+  font-family: 'Montserrat';
+  margin-bottom: 1rem;
+  display: block;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+
+  &--sub {
+    display: block;
+    font-family: inherit;
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: 0.4rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.2rem;
+  font-weight: 600;
+  display: inline-block;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  line-height: 2.6rem;
+}
+
+.paragraph {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  line-height: 26px;
+}
+
+.paragraph--small {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  line-height: 20px;
+}
