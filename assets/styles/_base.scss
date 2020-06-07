@@ -1,0 +1,34 @@
+@import './mixins';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // this defines what 1rem is equivalent to
+  font-size: 62.5%;
+
+  @include respond(phone) {
+    font-size: 40%; // 1rem = 10px, 10/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    font-size: 60%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 70%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 80%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
