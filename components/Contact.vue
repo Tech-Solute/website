@@ -93,6 +93,7 @@ export default {
     }
   },
   methods: {
+    // send user info from contact form to database [I use a dummy API]
     post() {
       axios
         .post('http://jsonplaceholder.typicode.com/posts', {
