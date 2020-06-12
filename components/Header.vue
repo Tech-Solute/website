@@ -58,6 +58,11 @@ export default {
       color: rgb(224, 221, 221);
     }
   }
+
+  &__content:before {
+    box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.3);
+    filter: blur(10px);
+  }
 }
 
 @import url(https://fonts.googleapis.com/css?family=Cabin);
