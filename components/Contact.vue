@@ -1,9 +1,7 @@
 <template>
   <div id="contact">
     <div class="contact-form">
-      <h2 class="heading-secondary u-margin-bottom-medium">
-        Start booking now
-      </h2>
+      <h2 class="heading-secondary u-margin-bottom-medium">Start booking now</h2>
       <form action="#" class="form">
         <div class="form__group">
           <input
@@ -28,9 +26,11 @@
         <div class="form__group">
           <label for="service" class="service__label">Choose a service:</label>
           <select v-model.lazy="contactForm.services" class="select-css">
-            <option v-for="(service, index) in services" :key="index">{{
+            <option v-for="(service, index) in services" :key="index">
+              {{
               service
-            }}</option>
+              }}
+            </option>
           </select>
         </div>
         <div class="form__group">
@@ -42,9 +42,7 @@
             required
           ></textarea>
         </div>
-        <button v-on:click.prevent="post()" class="btn btn--green">
-          GET A QUOTE
-        </button>
+        <button v-on:click.prevent="post()" class="btn btn--green">GET A QUOTE</button>
       </form>
     </div>
     <div class="contact-personnel">
@@ -54,17 +52,11 @@
           alt="Person to contact"
           class="contact-personnel__image"
         />
-        <figcaption class="contact-personnel__caption">
-          Vincent Abodei
-        </figcaption>
+        <figcaption class="contact-personnel__caption">Vincent Abodei</figcaption>
       </figure>
       <div class="contact-personnel__text">
-        <h3 class="heading-tertiary">
-          Ebizimoh Abodei
-        </h3>
-        <p>
-          Client Service Coordinator
-        </p>
+        <h3 class="heading-tertiary">Ebizimoh Abodei</h3>
+        <p>Client Service Coordinator</p>
       </div>
     </div>
   </div>
@@ -93,7 +85,8 @@ export default {
     }
   },
   methods: {
-    post() {
+    // send user info from contact form to database [I use a dummy API]
+    sendUserInfoToDb() {
       axios
         .post('http://jsonplaceholder.typicode.com/posts', {
           name: this.contactForm.name,
