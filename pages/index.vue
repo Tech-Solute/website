@@ -5,6 +5,7 @@
     <About></About>
     <Features></Features>
     <TabComponent></TabComponent>
+    <Mission></Mission>
     <Contact></Contact>
     <Footer></Footer>
   </div>
@@ -17,6 +18,7 @@ import About from './../components/About'
 import Features from './../components/Features'
 import TabComponent from './../components/TabComponent'
 import Contact from './../components/Contact'
+import Mission from './../components/Mission'
 import Footer from './../components/Footer'
 
 export default {
@@ -27,6 +29,7 @@ export default {
     Features,
     TabComponent,
     Contact,
+    Mission,
     Footer
   },
   data() {
