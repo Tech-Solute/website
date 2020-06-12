@@ -4,9 +4,9 @@
       <div class="offers-tab">
         <div v-for="(tab, index) in tabs" :key="index">
           <h4
-            class="nav-item"
             :class="{ 'is-active': tab.isActive }"
             @click="selectTab(tab)"
+            class="nav-item"
           >
             {{ tab.name }}
           </h4>
@@ -26,15 +26,15 @@ export default {
       tabs: []
     }
   },
+  created() {
+    this.tabs = this.$children
+  },
   methods: {
     selectTab(selectedTab) {
       this.tabs.forEach((tab) => {
         tab.isActive = tab.name === selectedTab.name
       })
     }
-  },
-  created() {
-    this.tabs = this.$children
   }
 }
 </script>
