@@ -1,24 +1,26 @@
 <template>
   <div id="contact">
     <div class="contact-form">
-      <h2 class="heading-secondary u-margin-bottom-medium">Start booking now</h2>
+      <h2 class="heading-secondary u-margin-bottom-medium">
+        Start booking now
+      </h2>
       <form action="#" class="form">
         <div class="form__group">
           <input
+            id="name"
             v-model.lazy="contactForm.name"
             type="text"
             class="form__input"
-            id="name"
             placeholder="Full name"
             required
           />
         </div>
         <div class="form__group">
           <input
+            id="email"
             v-model.lazy="contactForm.email"
             type="text"
             class="form__input"
-            id="email"
             placeholder="Email"
             required
           />
@@ -27,22 +29,22 @@
           <label for="service" class="service__label">Choose a service:</label>
           <select v-model.lazy="contactForm.services" class="select-css">
             <option v-for="(service, index) in services" :key="index">
-              {{
-              service
-              }}
+              {{ service }}
             </option>
           </select>
         </div>
         <div class="form__group">
           <textarea
+            id="message"
             v-model.lazy="contactForm.message"
             placeholder="Send us a message"
             class="form__input"
-            id="message"
             required
           ></textarea>
         </div>
-        <button v-on:click.prevent="post()" class="btn btn--green">GET A QUOTE</button>
+        <button v-on:click.prevent="post()" class="btn btn--green">
+          GET A QUOTE
+        </button>
       </form>
     </div>
     <div class="contact-personnel">
@@ -52,7 +54,9 @@
           alt="Person to contact"
           class="contact-personnel__image"
         />
-        <figcaption class="contact-personnel__caption">Vincent Abodei</figcaption>
+        <figcaption class="contact-personnel__caption">
+          Vincent Abodei
+        </figcaption>
       </figure>
       <div class="contact-personnel__text">
         <h3 class="heading-tertiary">Ebizimoh Abodei</h3>
