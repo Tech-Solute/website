@@ -110,10 +110,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './../assets/styles/_button.scss';
 @import './../assets/styles/_utilities.scss';
-@import './../assets/styles/_typography.scss';
-@import './../assets/styles/_variable.scss';
 #contact * {
   box-sizing: border-box;
 }
@@ -126,6 +123,9 @@ export default {
   justify-content: center;
   border-radius: 10px;
   box-shadow: 0 0 53px 0 rgba(0, 0, 0, 0.14);
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
 }
 
 label {

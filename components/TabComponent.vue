@@ -9,7 +9,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -27,7 +27,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -45,7 +45,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -63,7 +63,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -81,7 +81,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -99,7 +99,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -119,7 +119,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -137,7 +137,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -155,7 +155,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -173,7 +173,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -191,7 +191,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -209,7 +209,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -229,7 +229,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -247,7 +247,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -265,7 +265,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -283,7 +283,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -301,7 +301,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -319,7 +319,7 @@
           <div class="tabcontent-item">
             <img
               src="@/assets/images/logo.svg"
-              alt=""
+              alt
               class="offer-image"
               width="50"
               height="50"
@@ -353,7 +353,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './../assets/styles/_typography.scss';
+@import './../assets/styles/_utilities.scss';
 
 * {
   box-sizing: border-box;
@@ -363,6 +363,9 @@ export default {
   width: 80%;
   background-color: #efefef;
   margin: 4rem auto;
+  @include respond(phone) {
+    min-height: 1500px;
+  }
 }
 
 .tab-container {
@@ -390,6 +393,10 @@ export default {
   column-gap: 2px;
   row-gap: 2px;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.03);
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .tabcontent-item {
@@ -409,15 +416,27 @@ export default {
 
   &:first-child {
     border-top-left-radius: 7px;
+    @include respond(phone) {
+      border-top-right-radius: 7px;
+    }
   }
   &:nth-child(3) {
     border-top-right-radius: 7px;
+    @include respond(phone) {
+      border-top-right-radius: 0;
+    }
   }
   &:nth-child(4) {
     border-bottom-left-radius: 7px;
+    @include respond(phone) {
+      border-bottom-left-radius: 0;
+    }
   }
   &:last-child {
     border-bottom-right-radius: 7px;
+    @include respond(phone) {
+      border-bottom-left-radius: 7px;
+    }
   }
 }
 

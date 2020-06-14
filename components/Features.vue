@@ -69,7 +69,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import './../assets/styles/_typography.scss';
+@import './../assets/styles/_utilities.scss';
 
 .feature-section {
   height: 100%;
@@ -101,8 +101,16 @@ export default {
     width: 75vw;
     margin: 0 auto;
 
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+
     &:nth-child(2) {
       grid-template-columns: 40rem 1fr;
+
+      @include respond(phone) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 
