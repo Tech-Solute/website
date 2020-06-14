@@ -19,17 +19,28 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import './../assets/styles/_typography.scss';
+@import './../assets/styles/_utilities.scss';
 
 .about-section {
   height: 42rem;
   text-align: center;
+
+  @include respond(phone) {
+    min-height: 65vh;
+    width: 100%;
+  }
 
   &__textbox {
     display: inline-block;
     text-align: center;
     width: 100rem;
     padding: 10rem;
+
+    @include respond(phone) {
+      width: 80%;
+      margin: 0 auto;
+      padding: 2rem;
+    }
 
     & h2 {
       margin-bottom: 3rem;

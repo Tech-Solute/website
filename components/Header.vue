@@ -30,9 +30,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import './../assets/styles/_button.scss';
-@import './../assets/styles/_typography.scss';
-@import './../assets/styles/_mixins.scss';
+@import './../assets/styles/_utilities.scss';
 
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.822), rgba(0, 0, 0, 0.699)),
@@ -46,6 +44,10 @@ export default {
 
   &__hero-box {
     padding: 20rem 0 0 15rem;
+
+    @include respond(phone) {
+      padding: 15rem 0 0 5rem;
+    }
   }
 }
 
@@ -56,6 +58,10 @@ export default {
     & span {
       font-size: 1.6rem;
       color: rgb(224, 221, 221);
+    }
+
+    @include respond(phone) {
+      margin: 2rem 0;
     }
   }
 
