@@ -99,7 +99,7 @@ export default {
     grid-template-columns: 1fr 40rem;
     height: 100%;
     width: 75vw;
-    margin: 0 auto;
+    margin: 0 auto 6rem auto;
 
     @include respond(phone) {
       grid-template-columns: 1fr;
