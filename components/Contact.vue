@@ -1,66 +1,85 @@
+/* eslint-disable */
 <template>
-  <div id="contact">
-    <div class="contact-form">
+  <div class="container">
+    <div class="header-section">
+      <div class="subhead-copy">
+        ARE YOU READY
+        <br />
+        <br />
+      </div>
       <h2 class="heading-secondary u-margin-bottom-medium">
-        Start booking now
+        TO SAFELY IMPLEMENT YOUR PROJECT?
+        <br />
       </h2>
-      <form action="#" class="form">
-        <div class="form__group">
-          <input
-            id="name"
-            v-model.lazy="contactForm.name"
-            type="text"
-            class="form__input"
-            placeholder="Full name"
-            required
-          />
-        </div>
-        <div class="form__group">
-          <input
-            id="email"
-            v-model.lazy="contactForm.email"
-            type="text"
-            class="form__input"
-            placeholder="Email"
-            required
-          />
-        </div>
-        <div class="form__group">
-          <label for="service" class="service__label">Choose a service:</label>
-          <select v-model.lazy="contactForm.services" class="select-css">
-            <option v-for="(service, index) in services" :key="index">
-              {{ service }}
-            </option>
-          </select>
-        </div>
-        <div class="form__group">
-          <textarea
-            id="message"
-            v-model.lazy="contactForm.message"
-            placeholder="Send us a message"
-            class="form__input"
-            required
-          ></textarea>
-        </div>
-        <button v-on:click.prevent="post()" class="btn btn--green">
-          GET A QUOTE
-        </button>
-      </form>
+      <h5 class="description">
+        Fill out the contact form and we'll get ack to you immediately
+        <br />
+      </h5>
     </div>
-    <div class="contact-personnel">
-      <figure class="contact-personnel__shape">
-        <img
-          src="@/assets/images/image-placeholder.jpg"
-          alt="Person to contact"
-          class="contact-personnel__image"
-        />
-        <figcaption class="contact-personnel__caption">
-          Vincent Abodei
-        </figcaption>
-      </figure>
-      <div class="contact-personnel__text">
-        <h3 class="heading-tertiary">Ebizimoh Abodei</h3>
-        <p>Client Service Coordinator</p>
+    <div id="contact">
+      <div class="contact-form">
+        <form action="#" class="form">
+          <div class="form__group">
+            <input
+              id="name"
+              v-model.lazy="contactForm.name"
+              type="text"
+              class="form__input"
+              placeholder="Full name"
+              required
+            />
+          </div>
+          <div class="form__group">
+            <input
+              id="email"
+              v-model.lazy="contactForm.email"
+              type="text"
+              class="form__input"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="form__group">
+            <label for="service" class="service__label">Choose a service:</label>
+            <select v-model.lazy="contactForm.services" class="select-css">
+              <option v-for="(service, index) in services" :key="index">
+                {{
+                service
+                }}
+              </option>
+            </select>
+          </div>
+          <div class="form__group">
+            <textarea
+              id="message"
+              v-model.lazy="contactForm.message"
+              placeholder="Send us a message"
+              class="form__input"
+              required
+            ></textarea>
+          </div>
+          <div class="form-button">
+            <button v-on:click.prevent="post()" class="btn btn--green">GET A QUOTE</button>
+          </div>
+          <div class="div-block">
+            <img src="@/assets/images/lock.svg" alt="security icon" width="16px" />
+            <div class="text-block">We guarantee 100% confidentiality</div>
+          </div>
+        </form>
+      </div>
+      <div class="contact-personnel">
+        <figure class="contact-personnel__shape">
+          <img
+            src="@/assets/images/image-placeholder.jpg"
+            alt="Person to contact"
+            class="contact-personnel__image"
+          />
+          <figcaption class="contact-personnel__caption">Vincent Abodei</figcaption>
+        </figure>
+        <div class="contact-personnel__text">
+          <h3 class="heading-tertiary">Ebizimoh Abodei</h3>
+          <p>Client Service Coordinator</p>
+        </div>
       </div>
     </div>
   </div>
@@ -111,6 +130,14 @@ export default {
 
 <style lang="scss" scoped>
 @import './../assets/styles/_utilities.scss';
+
+.container {
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+}
 #contact * {
   box-sizing: border-box;
 }
@@ -235,6 +262,10 @@ label {
   font-size: $default-font-size;
   text-align: center;
 
+  @include respond(phone) {
+    display: none;
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -289,5 +320,31 @@ label {
 
 .heading-tertiary {
   padding-bottom: 0.5rem;
+}
+
+.form-button {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.div-block {
+  display: flex;
+  padding-top: 15px;
+  justify-content: center;
+  align-content: center;
+}
+.text-block {
+  display: inline-block;
+  padding-left: 5px;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
 }
 </style>
