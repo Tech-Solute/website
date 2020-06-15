@@ -40,12 +40,12 @@
             />
           </div>
           <div class="form__group">
-            <label for="service" class="service__label">Choose a service:</label>
+            <label for="service" class="service__label"
+              >Choose a service:</label
+            >
             <select v-model.lazy="contactForm.services" class="select-css">
               <option v-for="(service, index) in services" :key="index">
-                {{
-                service
-                }}
+                {{ service }}
               </option>
             </select>
           </div>
@@ -59,10 +59,16 @@
             ></textarea>
           </div>
           <div class="form-button">
-            <button v-on:click.prevent="post()" class="btn btn--green">GET A QUOTE</button>
+            <button v-on:click.prevent="post()" class="btn btn--green">
+              GET A QUOTE
+            </button>
           </div>
           <div class="div-block">
-            <img src="@/assets/images/lock.svg" alt="security icon" width="16px" />
+            <img
+              src="@/assets/images/lock.svg"
+              alt="security icon"
+              width="16px"
+            />
             <div class="text-block">We guarantee 100% confidentiality</div>
           </div>
         </form>
@@ -74,7 +80,9 @@
             alt="Person to contact"
             class="contact-personnel__image"
           />
-          <figcaption class="contact-personnel__caption">Vincent Abodei</figcaption>
+          <figcaption class="contact-personnel__caption">
+            Vincent Abodei
+          </figcaption>
         </figure>
         <div class="contact-personnel__text">
           <h3 class="heading-tertiary">Ebizimoh Abodei</h3>
@@ -133,16 +141,17 @@ export default {
 
 .container {
   margin: 0 auto;
+  margin-top: 5rem;
 }
 
-.header {
+.header-section {
   text-align: center;
 }
 #contact * {
   box-sizing: border-box;
 }
 #contact {
-  margin: 10rem auto;
+  margin: 8rem auto;
   max-width: 100rem;
   background-color: white;
   display: grid;
