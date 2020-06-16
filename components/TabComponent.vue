@@ -209,7 +209,7 @@
               src="@/assets/images/housing.svg"
               alt
               class="offer-image"
-              width="50"
+              width="52"
               height="50"
             />
             <div class="offer-content">
@@ -225,8 +225,8 @@
               src="@/assets/images/fintech.svg"
               alt
               class="offer-image"
-              width="50"
-              height="40"
+              width="44"
+              height="50"
             />
             <div class="offer-content">
               <h3 class="offer-content__title">FinTech</h3>
@@ -241,7 +241,7 @@
               src="@/assets/images/logistics.svg"
               alt
               class="offer-image"
-              width="50"
+              width="56"
               height="50"
             />
             <div class="offer-content">
@@ -257,7 +257,7 @@
               src="@/assets/images/ecommerce.svg"
               alt
               class="offer-image"
-              width="50"
+              width="52"
               height="50"
             />
             <div class="offer-content">
@@ -291,7 +291,7 @@
               src="@/assets/images/education.svg"
               alt
               class="offer-image"
-              width="50"
+              width="58"
               height="50"
             />
             <div class="offer-content">
