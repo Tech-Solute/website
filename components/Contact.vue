@@ -356,4 +356,22 @@ img {
   vertical-align: middle;
   display: inline-block;
 }
+
+.description {
+  margin-top: 0.5rem;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  line-height: 31px;
+  font-weight: 300;
+}
+
+.subhead-copy {
+  font-family: Montserrat, sans-serif;
+  color: #0ddb83;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: center;
+}
 </style>
