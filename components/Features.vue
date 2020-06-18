@@ -80,6 +80,10 @@ export default {
     align-content: center;
     padding: 0 20px;
 
+    @include respond(phone) {
+      width: 100%;
+    }
+
     & h2 {
       opacity: 0.5;
       color: rgb(0, 0, 0);
@@ -91,6 +95,10 @@ export default {
       font-size: 28px;
       line-height: 40px;
       font-weight: 400;
+      @include respond(phone) {
+        font-size: 24px;
+        line-height: 34px;
+      }
     }
   }
 

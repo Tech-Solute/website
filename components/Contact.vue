@@ -161,6 +161,8 @@ export default {
   box-shadow: 0 0 53px 0 rgba(0, 0, 0, 0.14);
   @include respond(phone) {
     grid-template-columns: 1fr;
+    border-radius: 0;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.14);
   }
 }
 

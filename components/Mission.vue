@@ -36,6 +36,10 @@ export default {
     width: auto;
     padding: 5rem;
 
+    @include respond(phone) {
+      padding: 3rem;
+    }
+
     & h3 {
       margin-bottom: 1.5rem;
     }
@@ -45,6 +49,9 @@ export default {
       margin-bottom: 1rem;
       line-height: 1.67;
       color: #eee;
+      @include respond(phone) {
+        line-height: 1.5;
+      }
     }
   }
 }

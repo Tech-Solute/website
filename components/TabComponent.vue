@@ -333,6 +333,7 @@ export default {
   margin: 4rem auto;
   @include respond(phone) {
     min-height: 1500px;
+    width: 100%;
   }
 }
 
@@ -351,6 +352,9 @@ export default {
   margin: 5rem 0;
   font-size: 3.2rem;
   font-weight: 500;
+  @include respond(phone) {
+    margin: 2.5rem 0;
+  }
 }
 
 .tab {
@@ -377,6 +381,10 @@ export default {
   display: grid;
   grid-template-columns: 5rem 1fr;
   column-gap: 10px;
+
+  @include respond(phone) {
+    padding: 30px 20px 0 20px;
+  }
 
   &:hover {
     background-color: rgba(50, 118, 242, 0.8);
