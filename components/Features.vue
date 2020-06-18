@@ -74,6 +74,10 @@ export default {
 .feature-section {
   height: 100%;
 
+  @include respond(phone) {
+    margin: 2rem 0;
+  }
+
   &__textbox {
     width: 70%;
     display: grid;
@@ -124,6 +128,16 @@ export default {
 
   .image__wrapper {
     width: 100%;
+
+    @include respond(phone) {
+      margin-bottom: 2rem;
+    }
+
+    &:nth-child(2) {
+      @include respond(phone) {
+        margin-top: 2rem;
+      }
+    }
   }
 }
 </style>
