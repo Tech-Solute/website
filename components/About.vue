@@ -26,7 +26,7 @@ export default {
   text-align: center;
 
   @include respond(phone) {
-    margin: 2rem 0;
+    margin-top: 2rem;
   }
 
   @include respond(phone) {
