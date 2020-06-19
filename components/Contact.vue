@@ -160,9 +160,10 @@ export default {
   border-radius: 10px;
   box-shadow: 0 0 53px 0 rgba(0, 0, 0, 0.14);
   @include respond(phone) {
+    padding: 2rem 0;
     grid-template-columns: 1fr;
     border-radius: 0;
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14);
   }
 }
 
