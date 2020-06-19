@@ -1,3 +1,5 @@
+@import './../assets/styles/_mixins.scss';
+
 .heading-primary {
   color: #eee;
   font-family: 'Montserrat';
@@ -6,6 +8,11 @@
   font-size: 4rem;
   font-weight: 400;
   letter-spacing: 0.2rem;
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+    line-height: 32.5px;
+  }
 
   &--sub {
     display: block;
@@ -29,16 +36,20 @@
   font-weight: 600;
   padding-bottom: 2rem;
   line-height: 2.6rem;
+
+  @include respond(phone) {
+    padding-bottom: 1rem;
+  }
 }
 
 .paragraph {
   font-size: 1.7rem;
   margin-bottom: 1rem;
-  line-height: 26px;
+  line-height: 2.6rem;
 }
 
 .paragraph--small {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  line-height: 20px;
+  line-height: 2rem;
 }
