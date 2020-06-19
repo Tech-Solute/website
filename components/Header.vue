@@ -30,7 +30,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import './../assets/styles/_utilities.scss';
+@import './../assets/styles/_button.scss';
+@import './../assets/styles/_typography.scss';
+@import './../assets/styles/_mixins.scss';
 
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.822), rgba(0, 0, 0, 0.699)),
@@ -42,17 +44,8 @@ export default {
   position: relative;
   color: white;
 
-  @include respond(phone) {
-    width: 100vw;
-  }
-
   &__hero-box {
     padding: 20rem 0 0 15rem;
-
-    @include respond(phone) {
-      padding: 15rem 2rem 0 2rem;
-      text-align: center;
-    }
   }
 }
 
@@ -63,21 +56,6 @@ export default {
     & span {
       font-size: 1.6rem;
       color: rgb(224, 221, 221);
-
-      @include respond(phone) {
-        font-size: 1.4rem;
-      }
-    }
-
-    @include respond(phone) {
-      font-size: 1.4rem;
-      margin: 2rem 0;
-    }
-  }
-
-  &__cta {
-    @include respond(phone) {
-      margin-top: 3rem;
     }
   }
 
@@ -87,14 +65,29 @@ export default {
   }
 }
 
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+
+$colorBg: #222a30;
+$colorOutline: #ffffff;
+$colorOutlineFade: #4e5559;
+
+$widthMouse: 35px;
+$heightMouse: 60px;
+$borderMouse: 3px;
+
+$posMouse: 8px;
+$posText: 2px;
+
+$sizeTrackball: 6px;
+$posTrackball: 10px;
+$shrinkTrackball: 0.4;
+
+$animDuration: 5s;
+
 .header__footer {
   display: grid;
   justify-content: center;
   margin-top: 15rem;
-
-  @include respond(phone) {
-    margin-top: 10rem;
-  }
 }
 
 @mixin bgGradient {

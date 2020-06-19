@@ -4,9 +4,9 @@
       <div class="offers-tab">
         <div v-for="(tab, index) in tabs" :key="index">
           <h4
+            class="nav-item"
             :class="{ 'is-active': tab.isActive }"
             @click="selectTab(tab)"
-            class="nav-item"
           >
             {{ tab.name }}
           </h4>
@@ -26,21 +26,20 @@ export default {
       tabs: []
     }
   },
-  created() {
-    this.tabs = this.$children
-  },
   methods: {
     selectTab(selectedTab) {
       this.tabs.forEach((tab) => {
         tab.isActive = tab.name === selectedTab.name
       })
     }
+  },
+  created() {
+    this.tabs = this.$children
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import './../assets/styles/_utilities.scss';
 * {
   box-sizing: border-box;
 }
@@ -51,10 +50,6 @@ export default {
 
 .tabs-details {
   padding: 10px;
-
-  @include respond(phone) {
-    padding: 0;
-  }
 }
 
 .offers-tab {
@@ -69,10 +64,6 @@ export default {
   max-width: 930px;
   margin-bottom: 70px;
   overflow: hidden;
-
-  @include respond(phone) {
-    margin-bottom: 50px;
-  }
 }
 
 .nav-item {
@@ -89,10 +80,6 @@ export default {
   text-align: center;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out 0s;
-
-  @include respond(phone) {
-    font-size: 14px;
-  }
 
   /*   &::before {
     content: '';

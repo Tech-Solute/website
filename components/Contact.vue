@@ -1,93 +1,62 @@
-/* eslint-disable */
 <template>
-  <div class="container">
-    <div class="header-section">
-      <div class="subhead-copy">
-        ARE YOU READY
-        <br />
-        <br />
-      </div>
-      <h2 class="heading-secondary u-margin-bottom-medium">
-        TO SAFELY IMPLEMENT YOUR PROJECT?
-        <br />
-      </h2>
-      <h5 class="description">
-        Fill out the contact form and we'll get ack to you immediately
-        <br />
-      </h5>
-    </div>
-    <div id="contact">
-      <div class="contact-form">
-        <form action="#" class="form">
-          <div class="form__group">
-            <input
-              id="name"
-              v-model.lazy="contactForm.name"
-              type="text"
-              class="form__input"
-              placeholder="Full name"
-              required
-            />
-          </div>
-          <div class="form__group">
-            <input
-              id="email"
-              v-model.lazy="contactForm.email"
-              type="text"
-              class="form__input"
-              placeholder="Email"
-              required
-            />
-          </div>
-          <div class="form__group">
-            <label for="service" class="service__label"
-              >Choose a service:</label
-            >
-            <select v-model.lazy="contactForm.services" class="select-css">
-              <option v-for="(service, index) in services" :key="index">
-                {{ service }}
-              </option>
-            </select>
-          </div>
-          <div class="form__group">
-            <textarea
-              id="message"
-              v-model.lazy="contactForm.message"
-              placeholder="Send us a message"
-              class="form__input"
-              required
-            ></textarea>
-          </div>
-          <div class="form-button">
-            <button v-on:click.prevent="post()" class="btn btn--green">
-              GET A QUOTE
-            </button>
-          </div>
-          <div class="div-block">
-            <img
-              src="@/assets/images/lock.svg"
-              alt="security icon"
-              width="16px"
-            />
-            <div class="text-block">We guarantee 100% confidentiality</div>
-          </div>
-        </form>
-      </div>
-      <div class="contact-personnel">
-        <figure class="contact-personnel__shape">
-          <img
-            src="@/assets/images/image-placeholder.jpg"
-            alt="Person to contact"
-            class="contact-personnel__image"
+  <div id="contact">
+    <div class="contact-form">
+      <h2 class="heading-secondary u-margin-bottom-medium">Start booking now</h2>
+      <form action="#" class="form">
+        <div class="form__group">
+          <input
+            v-model.lazy="contactForm.name"
+            type="text"
+            class="form__input"
+            id="name"
+            placeholder="Full name"
+            required
           />
-          <figcaption class="contact-personnel__caption">
-            Vincent Abodei
-          </figcaption>
-        </figure>
-        <div class="contact-personnel__text">
-          <h3 class="heading-tertiary">Ebizimoh Abodei</h3>
-          <p>Client Service Coordinator</p>
         </div>
+        <div class="form__group">
+          <input
+            v-model.lazy="contactForm.email"
+            type="text"
+            class="form__input"
+            id="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div class="form__group">
+          <label for="service" class="service__label">Choose a service:</label>
+          <select v-model.lazy="contactForm.services" class="select-css">
+            <option v-for="(service, index) in services" :key="index">
+              {{
+              service
+              }}
+            </option>
+          </select>
+        </div>
+        <div class="form__group">
+          <textarea
+            v-model.lazy="contactForm.message"
+            placeholder="Send us a message"
+            class="form__input"
+            id="message"
+            required
+          ></textarea>
+        </div>
+        <button v-on:click.prevent="post()" class="btn btn--green">GET A QUOTE</button>
+      </form>
+    </div>
+    <div class="contact-personnel">
+      <figure class="contact-personnel__shape">
+        <img
+          src="@/assets/images/image-placeholder.jpg"
+          alt="Person to contact"
+          class="contact-personnel__image"
+        />
+        <figcaption class="contact-personnel__caption">Vincent Abodei</figcaption>
+      </figure>
+      <div class="contact-personnel__text">
+        <h3 class="heading-tertiary">Ebizimoh Abodei</h3>
+        <p>Client Service Coordinator</p>
       </div>
     </div>
   </div>
@@ -137,21 +106,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './../assets/styles/_button.scss';
 @import './../assets/styles/_utilities.scss';
-
-.container {
-  margin: 0 auto;
-  margin-top: 5rem;
-}
-
-.header-section {
-  text-align: center;
-}
+@import './../assets/styles/_typography.scss';
+@import './../assets/styles/_variable.scss';
 #contact * {
   box-sizing: border-box;
 }
 #contact {
-  margin: 8rem auto;
+  margin: 10rem auto;
   max-width: 100rem;
   background-color: white;
   display: grid;
@@ -159,11 +122,6 @@ export default {
   justify-content: center;
   border-radius: 10px;
   box-shadow: 0 0 53px 0 rgba(0, 0, 0, 0.14);
-  @include respond(phone) {
-    grid-template-columns: 1fr;
-    border-radius: 0;
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.14);
-  }
 }
 
 label {
@@ -273,10 +231,6 @@ label {
   font-size: $default-font-size;
   text-align: center;
 
-  @include respond(phone) {
-    display: none;
-  }
-
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -331,49 +285,5 @@ label {
 
 .heading-tertiary {
   padding-bottom: 0.5rem;
-}
-
-.form-button {
-  display: grid;
-  align-content: center;
-  justify-content: center;
-}
-
-.div-block {
-  display: flex;
-  padding-top: 15px;
-  justify-content: center;
-  align-content: center;
-}
-.text-block {
-  display: inline-block;
-  padding-left: 5px;
-  color: #333;
-  font-size: 14px;
-  line-height: 20px;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.description {
-  margin-top: 0.5rem;
-  opacity: 0.5;
-  font-family: Montserrat, sans-serif;
-  font-size: 18px;
-  line-height: 31px;
-  font-weight: 300;
-}
-
-.subhead-copy {
-  font-family: Montserrat, sans-serif;
-  color: #0ddb83;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 15px;
-  text-align: center;
 }
 </style>
