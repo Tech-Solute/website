@@ -74,11 +74,19 @@ export default {
 .feature-section {
   height: 100%;
 
+  @include respond(phone) {
+    margin: 2rem 0;
+  }
+
   &__textbox {
     width: 70%;
     display: grid;
     align-content: center;
     padding: 0 20px;
+
+    @include respond(phone) {
+      width: 100%;
+    }
 
     & h2 {
       opacity: 0.5;
@@ -91,6 +99,10 @@ export default {
       font-size: 28px;
       line-height: 40px;
       font-weight: 400;
+      @include respond(phone) {
+        font-size: 24px;
+        line-height: 34px;
+      }
     }
   }
 
@@ -116,6 +128,16 @@ export default {
 
   .image__wrapper {
     width: 100%;
+
+    @include respond(phone) {
+      margin-bottom: 2rem;
+    }
+
+    &:nth-child(2) {
+      @include respond(phone) {
+        margin-top: 2rem;
+      }
+    }
   }
 }
 </style>
