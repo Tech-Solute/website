@@ -26,6 +26,10 @@ export default {
   text-align: center;
 
   @include respond(phone) {
+    margin-top: 3rem;
+  }
+
+  @include respond(phone) {
     min-height: 65vh;
     width: 100%;
     padding-top: 2rem;
@@ -45,6 +49,10 @@ export default {
 
     & h2 {
       margin-bottom: 3rem;
+
+      @include respond(phone) {
+        margin-bottom: 1rem;
+      }
     }
 
     & p {
