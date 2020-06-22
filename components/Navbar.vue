@@ -18,11 +18,13 @@
         <li>
           <a href="#" title="service">Services</a>
         </li>
+        <li>
+          <a class="cta" href="#">
+            <button>Contact</button>
+          </a>
+        </li>
       </ul>
     </nav>
-    <a class="cta" href="#">
-      <button>Contact</button>
-    </a>
   </header>
 </template>
 
@@ -83,7 +85,6 @@ header {
 }
 
 button {
-  margin-left: 20px;
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
   border: none;

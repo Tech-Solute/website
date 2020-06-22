@@ -2,12 +2,11 @@
   <div>
     <Navbar></Navbar>
     <Header></Header>
-    <div class="main" v-scroll-spy="section">
+    <div v-scroll-spy="section" class="main">
       <About></About>
       <TabComponent></TabComponent>
+      <Contact></Contact>
     </div>
-    <Mission></Mission>
-    <Contact></Contact>
     <Footer></Footer>
   </div>
 </template>
@@ -20,7 +19,6 @@ import Header from './../components/Header'
 import About from './../components/About'
 import TabComponent from './../components/TabComponent'
 import Contact from './../components/Contact'
-import Mission from './../components/Mission'
 import Footer from './../components/Footer'
 
 Vue.use(scrollSpy, {
@@ -34,7 +32,6 @@ export default {
     About,
     TabComponent,
     Contact,
-    Mission,
     Footer
   },
   data() {
