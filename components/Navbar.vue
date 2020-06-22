@@ -1,12 +1,16 @@
 <template>
   <header>
+    <input type="checkbox" id="check" />
+    <label for="check" class="checkbtn">
+      <img class="menu-image" src="./../assets/images/menu.svg" alt="menu" />
+    </label>
     <img
       class="logo"
       src="./../assets/images/logo.svg"
       alt="logo"
       width="30px"
     />
-    <nav role="navigation">
+    <nav class="nav" role="navigation">
       <ul
         class="nav__links"
         v-scroll-spy-active="{ class: 'customActive' }"
@@ -35,6 +39,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './../assets/styles/_utilities.scss';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -69,7 +75,66 @@ header {
   fill: white;
 }
 
-.nav__links {
+.checkbtn {
+  width: 26px;
+  cursor: pointer;
+  position: absolute;
+  display: none;
+
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+#check {
+  display: none;
+}
+
+.nav {
+  &__links {
+    list-style: none;
+
+    @include respond(phone) {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #333;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+
+    & li {
+      display: inline-block;
+      padding: 0px 40px;
+
+      @include respond(phone) {
+        display: block;
+        margin-top: 40px;
+      }
+
+      & a {
+        transition: all 0.3s ease 0s;
+        @include respond(phone) {
+          font-size: 20px;
+        }
+
+        &:hover {
+          color: #0088a9;
+        }
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  #check:checked + ul {
+    left: -100%;
+  }
+}
+
+/* .nav__links {
   list-style: none;
 }
 .nav__links li {
@@ -82,7 +147,7 @@ header {
 
 .nav__Links li a:hover {
   color: #0088a9;
-}
+} */
 
 button {
   padding: 9px 25px;
