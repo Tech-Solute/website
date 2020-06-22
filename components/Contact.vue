@@ -44,9 +44,9 @@
               >Choose a service:</label
             >
             <select v-model.lazy="contactForm.services" class="select-css">
-              <option v-for="(service, index) in services" :key="index">
-                {{ service }}
-              </option>
+              <option v-for="(service, index) in services" :key="index">{{
+                service
+              }}</option>
             </select>
           </div>
           <div class="form__group">

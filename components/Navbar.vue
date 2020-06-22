@@ -7,12 +7,16 @@
       width="30px"
     />
     <nav role="navigation">
-      <ul class="nav__links">
+      <ul
+        class="nav__links"
+        v-scroll-spy-active="{ class: 'customActive' }"
+        v-scroll-spy-link
+      >
         <li>
-          <a href="#" title="service">Services</a>
+          <a href="#" title="about">About</a>
         </li>
         <li>
-          <a href="#" About="service">About</a>
+          <a href="#" title="service">Services</a>
         </li>
       </ul>
     </nav>
@@ -68,7 +72,7 @@ header {
 }
 .nav__links li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0px 40px;
 }
 .nav__links li a {
   transition: all 0.3s ease 0s;

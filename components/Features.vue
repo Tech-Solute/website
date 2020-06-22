@@ -1,5 +1,5 @@
 <template>
-  <div class="feature-section">
+  <div class="feature-section" v-scroll-spy-link="{ selector: 'a.service' }">
     <div class="feature-section__wrapper">
       <div class="image__wrapper">
         <picture>
