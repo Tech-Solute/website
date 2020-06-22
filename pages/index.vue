@@ -2,38 +2,42 @@
   <div>
     <Navbar></Navbar>
     <Header></Header>
-    <About></About>
-    <Features></Features>
-    <TabComponent></TabComponent>
-    <Mission></Mission>
-    <Contact></Contact>
+    <div v-scroll-spy="section" class="main">
+      <About></About>
+      <TabComponent></TabComponent>
+      <Contact></Contact>
+    </div>
     <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+import scrollSpy, { Easing } from 'vue2-scrollspy'
 import Navbar from './../components/Navbar'
 import Header from './../components/Header'
 import About from './../components/About'
-import Features from './../components/Features'
 import TabComponent from './../components/TabComponent'
 import Contact from './../components/Contact'
-import Mission from './../components/Mission'
 import Footer from './../components/Footer'
+
+Vue.use(scrollSpy, {
+  easing: Easing.Cubic.In
+})
 
 export default {
   components: {
     Header,
     Navbar,
     About,
-    Features,
     TabComponent,
     Contact,
-    Mission,
     Footer
   },
   data() {
-    return {}
+    return {
+      section: 0
+    }
   }
 }
 </script>

@@ -1,321 +1,328 @@
 <template>
-  <div class="container">
-    <div class="title">
-      <h1 class="main-heading">WHAT WE OFFER</h1>
+  <div>
+    <div class="container">
+      <div class="title">
+        <h1 class="main-heading">WHAT WE OFFER</h1>
+      </div>
+      <div class="tab-container">
+        <Tabs>
+          <Tab name="service" selected="true" class="tab">
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/enterprise.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">
+                  Enterprise Software Development
+                </h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/mobile.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">Mobile App development</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/consultation.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">IT Consulting</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/team.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">Dedicated Development Team</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/ux.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">UX / UI Design</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/testing.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">QA &amp; Testing</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+          </Tab>
+          <Tab name="technology" class="tab">
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/database.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">Database Management</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/js.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">
+                  Javascript &amp; frameworks
+                </h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/ux.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">UX / UI Design</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/node.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">Node.js</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/ci-cd.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">CI / CD</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/testing.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">Jest Testing</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+          </Tab>
+          <Tab name="industry" class="tab">
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/housing.svg"
+                alt
+                class="offer-image"
+                width="52"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">Housing</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/fintech.svg"
+                alt
+                class="offer-image"
+                width="44"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">FinTech</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/logistics.svg"
+                alt
+                class="offer-image"
+                width="56"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">Logistics</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/ecommerce.svg"
+                alt
+                class="offer-image"
+                width="52"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">Ecommerce</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/sme.svg"
+                alt
+                class="offer-image"
+                width="50"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">
+                  Small &amp; Medium scale Enterprise
+                </h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+            <div class="tabcontent-item">
+              <img
+                src="@/assets/images/education.svg"
+                alt
+                class="offer-image"
+                width="58"
+                height="50"
+              />
+              <div class="offer-content">
+                <h3 class="offer-content__title">Education</h3>
+                <p class="offer-content__description">
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </p>
+              </div>
+            </div>
+          </Tab>
+        </Tabs>
+      </div>
     </div>
-    <div class="tab-container">
-      <Tabs>
-        <Tab name="service" selected="true" class="tab">
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/enterprise.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">
-                Enterprise Software Development
-              </h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/mobile.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">Mobile App development</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/consultation.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">IT Consulting</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/team.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">Dedicated Development Team</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/ux.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">UX / UI Design</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/testing.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">QA &amp; Testing</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-        </Tab>
-        <Tab name="technology" class="tab">
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/database.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">Database Management</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/js.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">Javascript &amp; frameworks</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/ux.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">UX / UI Design</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/node.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">Node.js</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/ci-cd.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">CI / CD</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/testing.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">Jest Testing</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-        </Tab>
-        <Tab name="industry" class="tab">
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/housing.svg"
-              alt
-              class="offer-image"
-              width="52"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">Housing</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/fintech.svg"
-              alt
-              class="offer-image"
-              width="44"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">FinTech</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/logistics.svg"
-              alt
-              class="offer-image"
-              width="56"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">Logistics</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/ecommerce.svg"
-              alt
-              class="offer-image"
-              width="52"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">Ecommerce</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/sme.svg"
-              alt
-              class="offer-image"
-              width="50"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">
-                Small &amp; Medium scale Enterprise
-              </h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div class="tabcontent-item">
-            <img
-              src="@/assets/images/education.svg"
-              alt
-              class="offer-image"
-              width="58"
-              height="50"
-            />
-            <div class="offer-content">
-              <h3 class="offer-content__title">Education</h3>
-              <p class="offer-content__description">
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-        </Tab>
-      </Tabs>
-    </div>
+    <Mission></Mission>
   </div>
 </template>
 
 <script>
 import Tab from '@/components/Tab'
 import Tabs from '@/components/Tabs'
+import Mission from '@/components/Mission'
 
 export default {
   components: {
     Tab,
-    Tabs
+    Tabs,
+    Mission
   }
 }
 </script>
